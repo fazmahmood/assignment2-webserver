@@ -16,7 +16,7 @@ def webServer(port=13331):
 
   while True:
     #Establish the connection
-    print('Ready to serve...')
+    #print('Ready to serve...')
     connectionSocket, addr = serverSocket.accept() #Fill in start -are you accepting connections?     #Fill in end
     
     try:
@@ -55,7 +55,7 @@ def webServer(port=13331):
       connectionSocket.send("HTTP/1.1 404 Not Found\r\n\r\n".encode())  # If file not there then 404 NOT FOUND Error Page Header.
       connectionSocket.send(
         "<html><head></head><body><h1>404 Not Found</h1></body></html>".encode())  # HTML formatted code returning  error: 404 NOT FOUND in respone to Browser
-      print(e)
+      #print(e)
       return;
 
       #Fill in end
